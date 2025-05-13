@@ -1,62 +1,72 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [MenubarModule],
+  imports: [MenubarModule, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   items: MenuItem[] | undefined;
 
   ngOnInit() {
     this.items = [
       {
         label: 'Home',
-        icon: 'pi pi-home'
+        icon: 'pi pi-home',
+        route: '/'
       },
       {
-        label: 'Features',
-        icon: 'pi pi-star'
-      },
-      {
-          label: 'Projects',
+          label: 'Services',
           icon: 'pi pi-search',
+          route: '/services',
           items: [
               {
-                  label: 'Components',
-                  icon: 'pi pi-bolt'
+                label: 'Repair',
+                icon: 'pi pi-bolt',
+                route: '/services/repair'
               },
               {
-                  label: 'Blocks',
-                  icon: 'pi pi-server'
+                label: 'Recovery',
+                icon: 'pi pi-pencil',
+                route: 'services/recovery'
               },
               {
-                  label: 'UI Kit',
-                  icon: 'pi pi-pencil'
+                label: 'Setup',
+                icon: 'pi pi-pencil',
+                route: 'services/setup'
               },
               {
-                label: 'Templates',
+                label: 'Small Business/Home Office',
                 icon: 'pi pi-palette',
                 items: [
                     {
-                        label: 'Apollo',
-                        icon: 'pi pi-palette'
+                      label: 'Apollo',
+                      icon: 'pi pi-palette'
                     },
                     {
-                        label: 'Ultima',
-                        icon: 'pi pi-palette'
+                      label: 'Ultima',
+                      icon: 'pi pi-palette'
                     }
                 ]
-              }
+              },
+              {
+                label: 'Our Team',
+                icon: 'pi pi-pencil'
+              },
           ]
+      },
+      {
+        label: 'Portfolio/Testimonials',
+        icon: 'pi pi-envelope'
       },
       {
         label: 'Contact',
         icon: 'pi pi-envelope'
-      }
+      },
   ]
   }
 }
