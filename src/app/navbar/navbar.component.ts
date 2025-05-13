@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -12,61 +13,82 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent implements OnInit {
   items: MenuItem[] | undefined;
 
+  constructor(private router: Router) {}
+
   ngOnInit() {
     this.items = [
       {
         label: 'Home',
         icon: 'pi pi-home',
-        route: '/'
+        command: () => {
+          this.router.navigate(['/']);
+        }
       },
       {
-          label: 'Services',
-          icon: 'pi pi-search',
-          route: '/services',
-          items: [
-              {
-                label: 'Repair',
-                icon: 'pi pi-bolt',
-                route: '/services/repair'
+        label: 'Techicians and Services',
+        icon: 'pi pi-search',
+        items: [
+            {
+              label: 'About Our Team',
+              icon: 'pi pi-pencil',
+              command: () => {
+                this.router.navigate(['/technicians']);
+              }
+            },
+            {
+              label: 'Connor',
+              icon: 'pi pi-bolt',
+              command: () => {
+                this.router.navigate(['/services/repair']);
               },
-              {
-                label: 'Recovery',
-                icon: 'pi pi-pencil',
-                route: 'services/recovery'
+              items: [
+                  {
+                    label: 'Repair',
+                    icon: 'pi pi-palette'
+                  },
+                  {
+                    label: 'Recovery',
+                    icon: 'pi pi-palette'
+                  },
+                  {
+                    label: 'Setup',
+                    icon: 'pi pi-palette'
+                  }
+              ]
+            },
+            {
+              label: 'Wyatt',
+              icon: 'pi pi-pencil',
+              command: () => {
+                this.router.navigate(['/services/recovery']);
               },
-              {
-                label: 'Setup',
-                icon: 'pi pi-pencil',
-                route: 'services/setup'
-              },
-              {
-                label: 'Small Business/Home Office',
-                icon: 'pi pi-palette',
-                items: [
-                    {
-                      label: 'Apollo',
-                      icon: 'pi pi-palette'
-                    },
-                    {
-                      label: 'Ultima',
-                      icon: 'pi pi-palette'
-                    }
-                ]
-              },
-              {
-                label: 'Our Team',
-                icon: 'pi pi-pencil'
-              },
-          ]
-      },
-      {
-        label: 'Portfolio/Testimonials',
-        icon: 'pi pi-envelope'
-      },
-      {
-        label: 'Contact',
-        icon: 'pi pi-envelope'
-      },
+              items: [
+                  {
+                    label: 'Apollo',
+                    icon: 'pi pi-palette'
+                  },
+                  {
+                    label: 'Ultima',
+                    icon: 'pi pi-palette'
+                  }
+              ]
+            }
+        ]
+    },
+    {
+      label: 'Portfolio/Testimonials',
+      icon: 'pi pi-envelope',
+      command: () => {
+        this.router.navigate(['/portfolio']);
+      }
+    },
+    {
+      label: 'Contact',
+      icon: 'pi pi-envelope',
+      command: () => {
+        this.router.navigate(['/contact']);
+      }
+    },
   ]
   }
 }

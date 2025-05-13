@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: aqua;
+}
+
+.titlecard {
+    padding: 100px;
+    margin: auto;
+    width: 50%;
+}
+
+.title {
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: darkgray
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+}

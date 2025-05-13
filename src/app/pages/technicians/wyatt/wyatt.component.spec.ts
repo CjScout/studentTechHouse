@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SbhoComponent } from './sbho.component';
+import { WyattComponent } from './wyatt.component';
 
-describe('SbhoComponent', () => {
-  let component: SbhoComponent;
-  let fixture: ComponentFixture<SbhoComponent>;
+describe('WyattComponent', () => {
+  let component: WyattComponent;
+  let fixture: ComponentFixture<WyattComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SbhoComponent]
+      imports: [WyattComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SbhoComponent);
+    fixture = TestBed.createComponent(WyattComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
