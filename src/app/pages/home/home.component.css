@@ -5,7 +5,7 @@
     align-items: center;
     height: 100vh;
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(20,200,255);
 }
 
 .titlecard {
@@ -16,14 +16,14 @@
 
 .title {
     text-align: center;
-    color: black;
+    color: rbg( 255,200,20);
     font-size: 3rem;
     margin: 0;
 }
 
 .subtitle {
     text-align: center;
-    color: darkgray
+    color: rbg(255,200,20);
 }
 
 .buttons {

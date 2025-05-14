@@ -53,6 +53,14 @@ export class NavbarComponent implements OnInit {
                   {
                     label: 'Setup',
                     icon: 'pi pi-palette'
+                  },
+                  {
+                    label: 'Small Business/Home Office Networking',
+                    icon: 'pi pi-palette'
+                  },
+                  {
+                    label: 'Legacy Systems',
+                    icon: 'pi pi-palette'
                   }
               ]
             },
@@ -64,11 +72,15 @@ export class NavbarComponent implements OnInit {
               },
               items: [
                   {
-                    label: 'Apollo',
+                    label: 'Repair',
                     icon: 'pi pi-palette'
                   },
                   {
-                    label: 'Ultima',
+                    label: 'Setup',
+                    icon: 'pi pi-palette'
+                  },
+                  {
+                    label: 'Telecommunications',
                     icon: 'pi pi-palette'
                   }
               ]
