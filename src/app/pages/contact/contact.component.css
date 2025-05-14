@@ -1,0 +1,25 @@
+.card {
+    width: 60%;
+}
+
+.title {
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: rgb(20,200,255);
+}
+
+p {
+    color: black;
+}
+
+p-button {
+    padding: 10px;;
+}
