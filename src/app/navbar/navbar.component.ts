@@ -26,11 +26,11 @@ export class NavbarComponent implements OnInit {
       },
       {
         label: 'Techicians and Services',
-        icon: 'pi pi-search',
+        icon: 'pi pi-desktop',
         items: [
             {
               label: 'About Our Team',
-              icon: 'pi pi-pencil',
+              icon: 'pi pi-book',
               command: () => {
                 this.router.navigate(['/technicians']);
               }
@@ -44,44 +44,44 @@ export class NavbarComponent implements OnInit {
               items: [
                   {
                     label: 'Repair',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-wave-pulse'
                   },
                   {
                     label: 'Recovery',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-wave-pulse'
                   },
                   {
                     label: 'Setup',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-cog'
                   },
                   {
                     label: 'Small Business/Home Office Networking',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-building'
                   },
                   {
                     label: 'Legacy Systems',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-clock'
                   }
               ]
             },
             {
               label: 'Wyatt',
-              icon: 'pi pi-pencil',
+              icon: 'pi pi-bolt',
               command: () => {
                 this.router.navigate(['/services/recovery']);
               },
               items: [
                   {
                     label: 'Repair',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-wave-pulse'
                   },
                   {
                     label: 'Setup',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-cog'
                   },
                   {
                     label: 'Telecommunications',
-                    icon: 'pi pi-palette'
+                    icon: 'pi pi-arrow-right-arrow-left'
                   }
               ]
             }
@@ -89,7 +89,7 @@ export class NavbarComponent implements OnInit {
     },
     {
       label: 'Portfolio/Testimonials',
-      icon: 'pi pi-envelope',
+      icon: 'pi pi-heart',
       command: () => {
         this.router.navigate(['/portfolio']);
       }

@@ -3,7 +3,7 @@
 }
 
 .title {
-    color: black;
+    color: rbg(255,200,20);
 }
 
 .container {
@@ -17,7 +17,7 @@
 }
 
 p {
-    color: black;
+    color: rbg(255,200,20);
 }
 
 p-button {
