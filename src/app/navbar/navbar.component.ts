@@ -39,28 +39,43 @@ export class NavbarComponent implements OnInit {
               label: 'Connor',
               icon: 'pi pi-bolt',
               command: () => {
-                this.router.navigate(['/services/repair']);
+                this.router.navigate(['technicians/connor']);
               },
               items: [
                   {
                     label: 'Repair',
-                    icon: 'pi pi-wave-pulse'
+                    icon: 'pi pi-wave-pulse',
+                    command: () => {
+                      this.router.navigate(['technicians/connor']);
+                    },
                   },
                   {
                     label: 'Recovery',
-                    icon: 'pi pi-wave-pulse'
+                    icon: 'pi pi-wave-pulse',
+                    command: () => {
+                      this.router.navigate(['technicians/connor']);
+                    },
                   },
                   {
                     label: 'Setup',
-                    icon: 'pi pi-cog'
+                    icon: 'pi pi-cog',
+                    command: () => {
+                      this.router.navigate(['technicians/connor']);
+                    },
                   },
                   {
                     label: 'Small Business/Home Office Networking',
-                    icon: 'pi pi-building'
+                    icon: 'pi pi-building',
+                    command: () => {
+                      this.router.navigate(['technicians/connor']);
+                    },
                   },
                   {
                     label: 'Legacy Systems',
-                    icon: 'pi pi-clock'
+                    icon: 'pi pi-clock',
+                    command: () => {
+                      this.router.navigate(['technicians/connor']);
+                    },
                   }
               ]
             },
@@ -68,20 +83,29 @@ export class NavbarComponent implements OnInit {
               label: 'Wyatt',
               icon: 'pi pi-bolt',
               command: () => {
-                this.router.navigate(['/services/recovery']);
+                this.router.navigate(['technicians/wyatt']);
               },
               items: [
                   {
                     label: 'Repair',
-                    icon: 'pi pi-wave-pulse'
+                    icon: 'pi pi-wave-pulse',
+                    command: () => {
+                      this.router.navigate(['technicians/wyatt']);
+                    },
                   },
                   {
                     label: 'Setup',
-                    icon: 'pi pi-cog'
+                    icon: 'pi pi-cog',
+                    command: () => {
+                      this.router.navigate(['technicians/wyatt']);
+                    },
                   },
                   {
                     label: 'Telecommunications',
-                    icon: 'pi pi-arrow-right-arrow-left'
+                    icon: 'pi pi-arrow-right-arrow-left',
+                    command: () => {
+                      this.router.navigate(['technicians/wyatt']);
+                    },
                   }
               ]
             }
